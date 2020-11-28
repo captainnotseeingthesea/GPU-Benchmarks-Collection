@@ -1,0 +1,109 @@
+Main page:
+http://iss.ices.utexas.edu/?p=projects/galois/lonestargpu
+
+Input sets:
+http://iss.ices.utexas.edu/projects/galois/downloads/lonestargpu-inputs.tar.gz
+
+--------------------------------------------------------------------------------
+LonestarGPU
+--------------------------------------------------------------------------------
+
+LonestarGPU is a collection of widely-used real-world applications that exhibit
+irregular behavior.
+This work is done in collaboration with Texas State University, San Marcos, USA
+Requirements
+
+    NVIDIA GPU with compute capability 2.0 or above
+    CUDA 4.0 or above
+    A modern Linux distribution
+
+--------------------------------------------------------------------------------
+Compilation
+--------------------------------------------------------------------------------
+
+tar xvzf lonestargpu-1.02.tar.gz
+cd lonestargpu-1.02/
+make
+make inputs
+
+This should make all the benchmarks in the suite and download sample inputs. If
+an individual benchmark is to be compiled, go to the appropriate benchmark
+directory in apps/ and run make. For compilation, nvcc should be in the path.
+Running benchmarks
+
+The compiled binaries are by default stored in bin/ directory. Invoke the
+appropriate application with command-lines specified as per individual benchmark
+description. The command make inputs creates a directory inputs/. Various input
+formats for the benchmarks are listed below.
+
+    BFS, MST, SSSP: .gr binary files
+    DMR: mesh files of the form .poly, .node and .ele
+    PTA: requires four kinds of text files
+    BH, SP: no input file necessary; input is generated randomly
+
+--------------------------------------------------------------------------------
+Changelog
+--------------------------------------------------------------------------------
+
+2013-09-03 LonestarGPU<lonestar@ices.utexas.edu>
+* version 1.02
+* Breadth-First Search bug fix on computing amount of work per thread.
+* Barnes-Hut uses diameter instead of radius.
+* Delaunay Mesh Refinement bug fix about reading input
+* Minimum Spanning Tree uses union-find
+* Header fix for MAC and FreeBSD
+* Update to CudaSM2Cores
+
+2013-02-01 LonestarGPU<lonestar@ices.utexas.edu>
+* version 1.0
+* uses common code base * Barnes Hut: bug fix, additional optimizations, and Kepler support added
+* Points-to Analysis: 4.x compatibility
+* inputs can be downloaded with "make inputs"
+
+2013-01-16 LonestarGPU <lonestar@ices.utexas.edu>
+* version 0.9
+* added Breadth-First Search
+* added Barnes-Hut N-Body Simulation
+* added Delaunay Mesh Refinement
+* added Minimum Spanning Tree
+* added Points-to Analysis
+* added Single-Source Shortest Paths
+* added Survey Propagation
+
+--------------------------------------------------------------------------------
+Related publication
+--------------------------------------------------------------------------------
+
+If you find this software useful in academic work, please acknowledge
+LonestarGPU and cite the following publication:
+  A Quantitative Study of Irregular Programs on GPUs
+  Martin Burtscher, Rupesh Nasre, Keshav Pingali
+  IEEE International Symposium on Workload Characterization (IISWC) 2012
+
+--------------------------------------------------------------------------------
+License
+--------------------------------------------------------------------------------
+
+This software is released under the terms of the University of Texas at Austin
+Research License, which makes this software available without charge to anyone
+for academic, research, experimental, or personal use. For all other uses,
+please contact the University of Texas at Austin's Office of Technology
+Commercialization.
+
+Galois, a framework to exploit amorphous data-parallelism in irregular
+programs.
+
+Copyright (C) 2013, The University of Texas at Austin. All rights
+reserved.  UNIVERSITY EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES
+CONCERNING THIS SOFTWARE AND DOCUMENTATION, INCLUDING ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR ANY PARTICULAR PURPOSE, NON-INFRINGEMENT
+AND WARRANTIES OF PERFORMANCE, AND ANY WARRANTY THAT MIGHT OTHERWISE
+ARISE FROM COURSE OF DEALING OR USAGE OF TRADE.  NO WARRANTY IS
+EITHER EXPRESS OR IMPLIED WITH RESPECT TO THE USE OF THE SOFTWARE OR
+DOCUMENTATION. Under no circumstances shall University be liable for
+incidental, special, indirect, direct or consequential damages or loss
+of profits, interruption of business, or related expenses which may
+arise from use of Software or Documentation, including but not limited
+to those resulting from defects in Software and/or Documentation,
+or loss or inaccuracy of data of any kind.
+

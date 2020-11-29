@@ -1,0 +1,6 @@
+[submodule "gpu-app-collection"]
+	path = gpu-app-collection
+	url = https://github.com/captainnotseeingthesea/gpu-app-collection.git
+[submodule "Galois"]
+	path = Galois
+	url = https://github.com/IntelligentSoftwareSystems/Galois.git

@@ -4,3 +4,6 @@
 [submodule "Galois"]
 	path = Galois
 	url = https://github.com/IntelligentSoftwareSystems/Galois.git
+[submodule "GaloisGPU"]
+	path = GaloisGPU
+	url = https://github.com/IntelligentSoftwareSystems/GaloisGPU.git

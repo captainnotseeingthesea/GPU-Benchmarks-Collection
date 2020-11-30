@@ -1,5 +1,16 @@
 # GPU-Benchmarks-Collection
-Collect the GPU benchmarks
+## Preparation:
+git-lfs(Used to deal with the large files): Refer to such link, https://github.com/git-lfs/git-lfs/releases, find the proper version and install it.
+
+## Installation
+To collect the GPU benchmarks included in this repository, use the followed commands to get them:
+```
+git clone https://github.com/captainnotseeingthesea/GPU-Benchmarks-Collection.git
+cd GPU-Benchmarks-Collection
+git-lfs pull // Due to this repository includes large files exceeding 100M, use this way to pull them
+git submodule init
+git submodule update
+```
 
 # BenchMark List
 
@@ -20,8 +31,8 @@ Polybench: S. Grauer-Gray, L. Xu, R. Searles, S. Ayalasomayajula, and J. Cavazos
 
 Lonestar: M. Burtscher, R. Nasre, and K. Pingali, “A Quantitative Study of Irregular Programs on GPUs,” in Proceedings of the International Symposium on Workload Characterization (IISWC), November 2012, pp. 141-151 
 
-## 2. Galois
-This repository includes longstar, which is an irregualar GPU benchmark, which can be got from https://github.com/IntelligentSoftwareSystems/Galois
+## 2. Galois, GaloisGPU
+This repository includes longstar, which is an irregualar GPU benchmark, which can be got from https://github.com/IntelligentSoftwareSystems/Galois and https://github.com/IntelligentSoftwareSystems/GaloisGPU
 Include some new benchmarks which are not included by gpu-app-collection/lonestargpu-2.0.
 If using this benchmark, please cite the following paper:
 M. Burtscher, R. Nasre, and K. Pingali, “A Quantitative Study of Irregular Programs on GPUs,” in Proceedings of the International Symposium on Workload Characterization (IISWC), November 2012, pp. 141-145
